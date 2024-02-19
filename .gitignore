@@ -3,3 +3,12 @@
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+.idea/scala_settings.xml
+
+target/
+out/
+src/main/resources/
+src/main/resources/sentiment.csv
+src/main/resources/Final Keywords_2024.csv
+.idea/
+target/

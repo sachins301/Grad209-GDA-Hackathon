@@ -8,6 +8,7 @@ lazy val root = (project in file("."))
   )
 
 libraryDependencies ++= Seq(
+  "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2",
   "org.apache.spark" %% "spark-core" % "3.3.4",
   "org.apache.spark" %% "spark-sql" % "3.3.4"
 )
