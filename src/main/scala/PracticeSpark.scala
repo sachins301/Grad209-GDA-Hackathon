@@ -9,8 +9,8 @@ object PracticeSpark extends App {
     .appName("SparkPractice")
     .config("spark.master", "local[*]")
     .getOrCreate()
-  spark.conf.set("spark.default.parallelism", 15)
-  spark.conf.set("spark.sql.shuffle.partitions", 15)
+  spark.conf.set("spark.default.parallelism", 200)
+  spark.conf.set("spark.sql.shuffle.partitions", 200)
   spark.sparkContext.setLocalProperty("spark.ui.view.acumulators", "true")
 
 
@@ -37,9 +37,9 @@ object PracticeSpark extends App {
     .na.fill(Map(
       "PublicScoreFullPrecision" -> 0.0,
       "PublicScoreLeaderboardDisplay" -> 0.0
-    ))
+    )).repartition(200)
 
-  df.show()
+//  df.show()
 //
 //  println("Before partitioning: " + df.rdd.getNumPartitions)
 //  val repartitionedDF = df.repartition(15)
